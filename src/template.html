@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+  <header>
+    <h1>To do or not to do</h1>
+  </header>
+
+  <nav class="sidebar">
+    <div class="projects">
+      <div class="all-todos">All</div>
+    </div>
+
+    <div class="project-new">
+      <button class="create new-project">New Project</button>
+
+      <form class="hidden project-form" method="post">
+        <div class="form-container">
+          <input required type="text" name="name" id="name">
+        </div>
+    
+        <div class="btn-align">
+          <button class="create" type="submit">Create</button>
+          <button class="cancel" type="button">Cancel</button>
+        </div>
+        
+      </form>
+    </div>
+  </nav>
+
+  <div class="todo-new">
+    <button class="create todo open-modal">New todo</button>
+    <dialog class="form-dialog">
+      <button class="close-modal">Close</button>
+      <form class="todo-form" method="post">
+        <div class="form-container">
+          <label for="title">Title</label>
+          <input required id="title" type="text">
+        </div>
+      
+        <div class="form-container">
+          <label for="description">Description</label>
+          <input required id="description" type="text">
+        </div>
+  
+        <div class="form-container">
+          <label for="dueDate">Due Date</label>
+          <input required id="dueDate" type="date">
+        </div>
+        
+        <div class="form-container">
+          Priority
+          <label><input required name="priority" type="radio" value="low">Low</label>
+  
+          <label><input required name="priority" type="radio" value="medium">Medium</label>
+  
+          <label><input required name="priority" type="radio" value="high">High</label>
+        </div>
+          
+        <button class="create" type="submit">Create</button>
+      </form>  
+    </dialog>
+    <dialog class="details-dialog">
+      <button class="close-details">Close</button>
+      <div>
+        <p>Title: <span class="details-title"></span></p>
+        <p>Description: <span class="details-description"></span></p>
+        <p>Due Date: <span class="details-dueDate"></span></p>
+        <p>Priority: <span class="details-priority"></span></p>
+      </div>
+    </dialog>
+    <dialog class="form-edit-dialog">
+      <button class="close-edit-modal">Close</button>
+      <form class="todo-edit-form" method="post">
+        <div class="form-container">
+          <label for="edit-title">Title</label>
+          <input required id="edit-title" type="text">
+        </div>
+      
+        <div class="form-container">
+          <label for="edit-description">Description</label>
+          <input required id="edit-description" type="text">
+        </div>
+  
+        <div class="form-container">
+          <label for="edit-dueDate">Due Date</label>
+          <input required id="edit-dueDate" type="date">
+        </div>
+        
+        <div class="form-container">
+          Priority
+          <label><input required name="edit-priority" type="radio" value="low">Low</label>
+  
+          <label><input required name="edit-priority" type="radio" value="medium">Medium</label>
+  
+          <label><input required name="edit-priority" type="radio" value="high">High</label>
+        </div>
+          
+        <button class="create" type="submit">Edit</button>
+      </form>  
+    </dialog>
+  </div>
+
+  <div class="main-container">
+
+  </div>
+
+
+</body>
+</html>

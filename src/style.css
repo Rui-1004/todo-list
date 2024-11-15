@@ -1,0 +1,232 @@
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #c0d6df;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 100px 100px 1fr;
+}
+
+header {
+  margin-left: 3rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 2;
+}
+
+.todo-new {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 50px);
+  grid-column-start: 2;
+  gap: 5px;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(166, 186, 194);
+  padding: 1rem;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details,
+.remove {
+  height: 50%;
+}
+
+.details {
+  background-color: #007fc9;
+}
+
+.details:hover {
+  background-color: #016ba8;
+}
+
+.details:active {
+  background-color: #004f7c;
+}
+
+.remove {
+  background-color: #db2828;
+}
+
+.remove:hover {
+  background-color: #a31e1e;
+}
+
+.remove:active {
+  background-color: #861919;
+}
+
+.edit {
+  margin-right: 2rem;
+  background-color: #00ad3a;
+}
+
+.edit:hover {
+  background-color: #009431;
+}
+
+.edit:active {
+  background-color: #007427;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project,
+.all-todos {
+  background-color: #c0d6df;
+  padding: .5rem;
+  color: #1A1A19;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.project:hover,
+.all-todos:hover {
+  background-color: rgb(166, 186, 194);
+  cursor: pointer;
+}
+
+.project:active {
+  background-color: rgb(139, 156, 163);
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 300px;
+  gap: 10px;
+  background-color: #dbe9ee;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+.project-form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-align {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"], 
+input[type="date"] {
+  padding: 5px;
+  background-color: #dbe9ee;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5px 0 5px 0;
+}
+
+input[type=radio] {
+  --size: 1rem;     
+  --color: #009688;
+  
+  margin-top: 1px;
+  vertical-align: top;
+  height: var(--size);
+  aspect-ratio: 1;
+  border: calc(var(--size)/8) solid #939393;
+  padding: calc(var(--size)/8);
+  background: 
+    radial-gradient(farthest-side,var(--color) 94%,#0000) 
+    50%/0 0 no-repeat content-box;
+  border-radius: 50%;
+  outline-offset: calc(var(--size)/10);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: .3s;
+}
+
+input[type=radio]:checked {
+  border-color: var(--color);
+  background-size: 100% 100%;
+}
+
+input[type=radio]:disabled {
+  background: 
+    linear-gradient(#939393 0 0) 
+    50%/100% 20% no-repeat content-box;
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  width: 80px;
+  padding: .5rem;
+  background-color: #009688;
+  color: #ffffff;
+  border: solid 1px black;
+}
+
+.create:hover {
+  background-color: rgb(0, 100, 100);
+}
+
+.create:active {
+  background-color: rgb(0, 128, 128, 0.9);
+}
+
+.cancel {
+  background-color: #ff3030;
+}
+
+.cancel:hover {
+  background-color: #a31e1e;
+}
+
+.cancel:active {
+  background-color: rgb(255, 48, 48, 0.9);
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
